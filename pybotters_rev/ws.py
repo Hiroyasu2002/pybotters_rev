@@ -17,7 +17,7 @@ import aiohttp
 from aiohttp.http_websocket import json
 from aiohttp.typedefs import StrOrURL
 
-import pybotters
+import pybotters_rev
 
 from .auth import Auth as _Auth
 
