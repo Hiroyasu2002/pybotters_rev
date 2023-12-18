@@ -9,8 +9,8 @@ from enum import Enum, auto
 from typing import Any, Awaitable, Optional, cast
 
 import aiohttp
-from pybotters_rev.store import DataStore, DataStoreManager
-from pybotters_rev.typedefs import Item
+from pybotters.store import DataStore, DataStoreManager
+from pybotters.typedefs import Item
 
 from ..auth import Auth
 from ..ws import ClientWebSocketResponse
@@ -652,7 +652,7 @@ class GMOCoinDataStore(DataStoreManager):
 
     def _onmessage(self, msg: Item, ws: ClientWebSocketResponse) -> None:
         if "error" in msg:
-            logger.warning(msg)
+            logger.warning(f"{datetime.now()}, {msg}")
         if "channel" in msg:
             msg_type = MessageType[msg.get("msgType", MessageType.NONE.name)]
             channel: Channel = Channel.from_str(msg["channel"])
