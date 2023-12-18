@@ -9,8 +9,8 @@ from enum import Enum, auto
 from typing import Any, Awaitable, Optional, cast
 
 import aiohttp
-from pybotters.store import DataStore, DataStoreManager
-from pybotters.typedefs import Item
+from pybotters_rev.store import DataStore, DataStoreManager
+from pybotters_rev.typedefs import Item
 
 from ..auth import Auth
 from ..ws import ClientWebSocketResponse
