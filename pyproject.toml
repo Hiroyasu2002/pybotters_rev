@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pybotters"
+name = "pybotters_rev"
 version = "0.17.0"
 description = "An advanced API client for python botters."
 license = "MIT"
